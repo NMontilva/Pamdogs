@@ -90,6 +90,9 @@ class TestController extends Controller
     {
         $user = Servicio_Empleado::find($id);
 
-        dd($user);
+        $user->empleado;
+        $user->servicio;
+
+        return view('test.index', ['user' => $user]);
     }
 }

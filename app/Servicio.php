@@ -12,7 +12,6 @@ class Servicio extends Model
 
     public function serviciosempleados()
     {
-    	return $this->hasMany('App\ServicioEmpleado');
+    	return $this->hasMany('App\ServicioEmpleado', 'id_servicios', 'id_servicios');
     }
-}
 }

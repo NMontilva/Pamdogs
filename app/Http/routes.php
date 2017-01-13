@@ -28,3 +28,5 @@ Route::group(['prefix' => 'servicios'], function(){
 	});
 
 });
+
+Route::controller('gmaps', 'GmapsController');

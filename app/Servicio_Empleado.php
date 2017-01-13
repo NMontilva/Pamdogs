@@ -12,11 +12,11 @@ class Servicio_Empleado extends Model
 
     public function empleado()
     {
-    	return $this->belongsToMany('App\Empleado');
+    	return $this->belongsToMany('App\Empleado', 'mas_servicios_empleados', 'id_empleados', 'id_empleados');
     }
 
     public function servicio()
     {
-    	return $this->belongsToMany('App\Servicio');
+    	return $this->belongsToMany('App\Servicio', 'mas_servicios_empleados', 'id_servicios', 'id_servicios');
     }
 }
