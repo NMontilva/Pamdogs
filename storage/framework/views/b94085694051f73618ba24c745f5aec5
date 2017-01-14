@@ -1,0 +1,9 @@
+<script type="text/javascript">var centreGot = false;</script><?php echo $map['js']; ?>
+
+<?php $__env->startSection('title', 'Home'); ?> 
+
+<?php $__env->startSection('content'); ?>
+<?php echo $map['html']; ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.template.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

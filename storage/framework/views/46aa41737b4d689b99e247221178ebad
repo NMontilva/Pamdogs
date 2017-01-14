@@ -1,0 +1,21 @@
+<hr>
+<?php for($i = 0; $i <= 5; $i++): ?>
+	<?php echo e($i); ?>
+
+<?php endfor; ?>
+<hr>
+<?php if(1 == 1): ?>
+	<?php echo e("Es igual a 1"); ?>
+
+<?php endif; ?>
+<hr>
+<?php foreach($user->empleado as $empleado): ?>
+	<?php echo e($empleado->nombres_empleado); ?>
+
+<?php endforeach; ?>
+<hr>
+<?php foreach($user->servicio as $servicio): ?>
+	<?php echo e($servicio->nombre_servicios); ?>
+
+<?php endforeach; ?>
+<hr>
