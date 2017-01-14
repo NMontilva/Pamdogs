@@ -139,6 +139,8 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         GeneaLabs\Phpgmaps\PhpgmapsServiceProvider::class,
         GoogleMaps\ServiceProvider\GoogleMapsServiceProvider::class,
+        AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider::class,
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -179,6 +181,7 @@ return [
         'Html'      => Collective\Html\HtmlFacade::class,
         'GoogleMaps' => GoogleMaps\Facade\GoogleMapsFacade::class,
         'Gmaps'     => GeneaLabs\Phpgmaps\Facades\PhpgmapsFacade::class,
+        'OAuth'     => AdamWathan\EloquentOAuth\Facades\OAuth::class,
         'Gate'      => Illuminate\Support\Facades\Gate::class,
         'Hash'      => Illuminate\Support\Facades\Hash::class,
         'Input'     => Illuminate\Support\Facades\Input::class,

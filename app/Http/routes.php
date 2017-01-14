@@ -29,4 +29,14 @@ Route::group(['prefix' => 'servicios'], function(){
 
 });
 
-Route::controller('gmaps', 'GmapsController');
+Route::get('gmaps', function(){
+   return view('gmaps.gmaps');
+});
+
+Route::get('auth', function(){
+   return OAuth::authorize('facebook');
+});
+
+Route::get('home', function(){
+   return view('home.registro');
+});
