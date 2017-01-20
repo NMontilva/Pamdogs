@@ -10,10 +10,14 @@
 	@include('admin.template.partials.nav')
 
 	<section>
-		@yield('content')
+			<div class="container">
+				@include('flash::message')
+				@include('admin.template.partials.errors')
+				@yield('content')
+			</div>
 	</section>
 
-	<script type="{{ asset('plugins/jquery/js/jquery-3.1.1') }}"></script>
-	<script type="{{ asset('plugins/bootstrap/js/bootstrap.js') }}"></script>
+	<script src="{{ asset('plugins/jquery/js/jquery-2.1.4.js') }}"></script>
+	<script src="{{ asset('plugins/bootstrap/js/bootstrap.js') }}"></script>
 </body>
 </html>
