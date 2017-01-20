@@ -29,6 +29,26 @@ Route::group(['prefix' => 'servicios'], function(){
 
 });
 
+Route::group(['prefix' => 'admin'], function(){
+
+	Route::resource('users','UsersController');
+	Route::get('users/{id}/destroy',[
+			'uses' => 'UsersController@destroy',
+			'as'   => 'admin.users.destroy',
+]);
+
+});
+
+Route::group(['prefix' => 'admin'], function(){
+
+	Route::resource('clientes','ClientesController');
+		Route::get('clientes/{id}/destroy',[
+			'uses' => 'ClientesController@destroy',
+			'as'   => 'admin.clientes.destroy',
+]);
+
+});
+
 Route::get('gmaps', function(){
    return view('gmaps.gmaps');
 });
