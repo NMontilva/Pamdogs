@@ -15,8 +15,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="<?php echo e(url('/gmaps')); ?>">Google Maps</a></li>
-        <li><a href="<?php echo e(url('/home')); ?>">Registro</a></li>
+        <li><a href="<?php echo e(route('admin.users.index')); ?>">Usuarios</a></li>
+        <li><a href="<?php echo e(route('admin.clientes.index')); ?>">Clientes</a></li>
         <li><a href="<?php echo e(url('/auth')); ?>">Facebook</a></li>
+        <li><a href="<?php echo e(url('/admin')); ?>">Inicio de Sesion</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

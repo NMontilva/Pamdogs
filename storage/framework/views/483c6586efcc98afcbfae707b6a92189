@@ -1,0 +1,43 @@
+<?php $__env->startSection('title','Usuarios Registrados'); ?>
+
+
+<?php $__env->startSection('content'); ?>
+
+	<legend>Listado</legend>
+
+	<a href="<?php echo e(route('admin.users.create')); ?>" class="btn btn-default">Registrar nuevo cliente</a>
+	<table class="table table-striped">
+		<thead>
+			<th>ID</th>
+			<th>Nombre</th>
+			<th>Cedula</th>
+			<th>Edad</th>
+			<th>Telefono Habitacion</th>
+			<th>Telefono Movil</th>
+			<th>Sexo</th>
+			<th>Direccion</th>
+			<th>Descripcion</th>
+			<th>Estatus</th>
+		</thead>
+		<tbody>
+			<?php foreach($clientes as $cliente): ?>
+				<tr>
+					<td><?php echo e($cliente->id); ?></td>
+					<td><?php echo e($cliente->nombres.' '.$cliente->apellido); ?></td>
+					<td><?php echo e($cliente->cedula); ?></td>
+					<td><?php echo e($cliente->edad); ?></td>
+					<td><?php echo e($cliente->telefono_habitacion); ?></td>
+					<td><?php echo e($cliente->telefono_movil); ?></td>
+					<td><?php echo e($cliente->sexo); ?></td>
+					<td><?php echo e($cliente->direccion); ?></td>
+					<td><?php echo e($cliente->descripcion); ?></td>
+					<td><?php echo e($cliente->estatus); ?></td>
+					<td><a href="<?php echo e(route('admin.clientes.edit', $cliente->id)); ?>" class="btn btn-warning"><span class="glyphicon glyphicon-wrench"></span></a><a href="<?php echo e(route('admin.clientes.destroy', $cliente->id)); ?>" class="btn btn-danger" aria-hidden="true" onclick="return confirm('Seguro desea elimiar al usuario?')"><span class="glyphicon glyphicon-remove-circle" oncl aria-hidden="true"></span></a></td>
+				</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+	<?php echo $clientes->render(); ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.template.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

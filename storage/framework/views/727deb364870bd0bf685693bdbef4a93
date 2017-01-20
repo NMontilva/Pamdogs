@@ -1,0 +1,81 @@
+<?php $__env->startSection('title','Registrar Cliente'); ?>
+
+<?php $__env->startSection('content'); ?>
+
+	<legend>Registro de Clientes</legend>
+
+	<?php echo Form::open(['route'=>'admin.clientes.store', 'method' => 'POST']); ?>
+
+
+		<div class="form-group">
+			<?php echo Form::label('nombres', 'Nombres'); ?>
+
+			<?php echo Form::text('nombres', null, ['class' => 'form-control', 'placeholder' => 'Nombres', 'required']); ?>
+
+		</div>
+
+		<div class="form-group">
+			<?php echo Form::label('apellido', 'Apellidos'); ?>
+
+			<?php echo Form::text('apellido', null, ['class' => 'form-control', 'placeholder' => 'Apellidos', 'required']); ?>
+
+		</div>
+
+		<div class="form-group">
+			<?php echo Form::label('cedula', 'Cedula'); ?>
+
+			<?php echo Form::text('cedula', null, ['class' => 'form-control', 'placeholder' => 'Cedula de Identidad', 'required']); ?>
+
+		</div>
+				<div class="form-group">
+			<?php echo Form::label('edad', 'Edad'); ?>
+
+			<?php echo Form::text('edad', null, ['class' => 'form-control', 'placeholder' => 'Edad', 'required']); ?>
+
+		</div>
+
+		<div class="form-group">
+			<?php echo Form::label('telefono', 'Telefono de Habitacion'); ?>
+
+			<?php echo Form::text('telefono', null, ['class' => 'form-control', 'placeholder' => 'Telefono de Habitacion', 'required']); ?>
+
+		</div>
+
+		<div class="form-group">
+			<?php echo Form::label('telefono', 'Telefono Movil'); ?>
+
+			<?php echo Form::text('telefono', null, ['class' => 'form-control', 'placeholder' => 'Telefono Movil', 'required']); ?>
+
+		</div>
+
+		<div class="form-group">
+			<?php echo Form::label('sexo','Sexo'); ?>
+
+			<?php echo Form::select('sexo', ['' => 'Seleccione su sexo','masculino' => 'Masculino', 'femenino' => 'Femenino'], null, ['class'=>'form-control']); ?>
+
+		</div>
+
+		<div class="form-group">
+			<?php echo Form::label('direccion', 'Direccion'); ?>
+
+			<?php echo Form::text('direccion', null, ['class' => 'form-control', 'placeholder' => 'Direccion', 'required']); ?>
+
+		</div>
+
+		<div class="form-group">
+			<?php echo Form::label('descripcion', 'Descripcion'); ?>
+
+			<?php echo Form::textarea('descripcion', null, ['class' => 'form-control', 'placeholder' => 'Descripcion', 'required']); ?>
+
+		</div>
+
+		<div class="form-group">
+			<?php echo Form::submit('Registrar', ['class' => 'btn btn-primary']); ?>
+
+		</div>
+
+	<?php echo Form::close(); ?>
+
+ 
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.template.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
